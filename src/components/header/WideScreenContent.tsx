@@ -38,7 +38,7 @@ export default function WideScreenContentImpl() {
       </nav>
       <div className="flex items-center">
         <div className="h-full ml-3 min-w-[2.2rem]">
-          <DarkModeToggle onChange={toggle} checked={isDarkMode} size={69} />
+          <DarkModeToggle />
         </div>
       </div>
     </div>

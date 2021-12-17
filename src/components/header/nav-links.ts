@@ -1,9 +1,4 @@
-export const navigationLinks: NavLink[] = [
-  {url: '/resume', label: 'Resume'},
-  {url: '/about', label: 'About'},
-  {url: '/blog', label: 'Blog'},
-  {url: '/words', label: 'Vocab'},
-];
+export const navigationLinks: NavLink[] = [{url: '/', label: 'Home'}];
 
 type NavLink = {
   label: string;

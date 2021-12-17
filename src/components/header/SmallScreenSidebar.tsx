@@ -114,12 +114,7 @@ const SmallScreenSidebar: FunctionComponent<{
 
           <section className="text-left">
             <h3 className="my-4 text-2xl">Toggle Theme</h3>
-            <DarkModeToggle
-              onChange={toggle}
-              checked={isDarkMode}
-              size={70}
-              className="outline-2 outline-white rounded-3xl"
-            />
+            <DarkModeToggle className="outline-2 outline-white rounded-3xl" />
           </section>
 
           <section className="absolute bottom-2 flex flex-col items-center">
