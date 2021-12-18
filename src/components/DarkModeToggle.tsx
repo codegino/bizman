@@ -9,8 +9,6 @@ const DarkModeToggle: FunctionComponent<{
 }> = ({className}) => {
   const {value: isDarkMode, toggle} = useDarkMode();
 
-  console.log(isDarkMode);
-
   return (
     <NoSsr>
       <div onClick={toggle} role="presentation" className={className}>
