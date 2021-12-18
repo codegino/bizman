@@ -1,3 +1,6 @@
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Head from 'next/head';
 import {commonMetaTags} from '../frontend-utils/meta-tags';
@@ -14,7 +17,25 @@ export default function Home({}: InferGetStaticPropsType<
       </Head>
 
       <main>
-        <h1>Hello worlds</h1>
+        <Container>
+          <Typography variant="h1">Hello world</Typography>
+          <Typography
+            color={{
+              xs: 'yellow',
+              sm: 'red',
+              md: 'blue',
+              lg: 'pink',
+            }}
+          >
+            YOYO
+          </Typography>
+        </Container>
+        <Button variant="outlined" color="primary">
+          Hello
+        </Button>
+        <Button variant="contained" color="primary">
+          Hello
+        </Button>
       </main>
     </>
   );
