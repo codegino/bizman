@@ -4,7 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const config = {
   reactStrictMode: true,
-  pageExtensions: ['tsx'],
+  pageExtensions: ['tsx', 'ts'],
   compress: true,
   images: {
     domains: [],
