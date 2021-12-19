@@ -7,10 +7,10 @@ import App from 'next/app';
 import useDarkMode from 'use-dark-mode';
 import Footer from '../components/Footer';
 import Header from '../components/header/Header';
-import darkTheme from '../dark-theme';
 import '../styles/_globals.css';
 import '../styles/animations.css';
-import lightTheme from '../theme';
+import darkTheme from '../styles/dark-theme';
+import lightTheme from '../styles/theme';
 import createEmotionCache from '../utils/createEmotionCache';
 import {supabase} from '../utils/supabase-client';
 

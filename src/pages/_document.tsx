@@ -1,7 +1,6 @@
 import {Children} from 'react';
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, {Html, Head, Main, NextScript} from 'next/document';
-import theme from '../theme';
 import createEmotionCache from '../utils/createEmotionCache';
 
 class MyDocument extends Document {
@@ -16,7 +15,6 @@ class MyDocument extends Document {
             content="React,React Native,Javascript,Typescript,Remix,NodeJS,HTML,CSS"
           />
 
-          <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
