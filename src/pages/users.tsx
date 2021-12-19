@@ -1,17 +1,14 @@
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import type {GetServerSideProps} from 'next';
+import type {GetServerSideProps, InferGetServerSidePropsType} from 'next';
 import Head from 'next/head';
 import {commonMetaTags} from '../frontend-utils/meta-tags';
 import {User} from '../models/User';
 import {supabase} from '../utils/supabase-client';
 
-export default function Home() {
-  const handleSignOut = async () => {
-    await supabase.auth.signOut();
-  };
-
+export default function Projects({
+  users,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Head>
@@ -20,22 +17,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container>
-          <Typography variant="h1">Hello world</Typography>
-          <Typography
-            color={{
-              xs: 'yellow',
-              sm: 'red',
-              md: 'blue',
-              lg: 'pink',
-            }}
-          >
-            YOYO
-          </Typography>
-        </Container>
-        <Button variant="outlined" color="error" onClick={handleSignOut}>
-          Sign out
-        </Button>
+        {users.map(user => (
+          <Container key={user.id}>
+            <Typography variant="h1">
+              {user.first_name} {user.last_name}
+            </Typography>
+            <Typography variant="h2">{user.user_id}</Typography>
+          </Container>
+        ))}
       </main>
     </>
   );
