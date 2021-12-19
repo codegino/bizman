@@ -7,8 +7,6 @@ import App from 'next/app';
 import useDarkMode from 'use-dark-mode';
 import Footer from '../components/Footer';
 import Header from '../components/header/Header';
-import '../styles/_globals.css';
-import '../styles/animations.css';
 import darkTheme from '../styles/dark-theme';
 import lightTheme from '../styles/theme';
 import createEmotionCache from '../utils/createEmotionCache';
